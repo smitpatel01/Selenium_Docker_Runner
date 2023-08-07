@@ -17,4 +17,4 @@ jobs:
           token: ${{ secrets.SELENIUM_DOCKER_PAT }}  # Replace with your personal access token for repo2
           repository: smitpatel01/Selenium_Docker  # Replace with your GitHub username and the name of repo2
           event-type: build_and_push  # Replace with the event type that matches your workflow_dispatch inputs in main.yml
-          client-payload: '{}'  # You can pass additional data as JSON here if needed
+          client-payload: '{{"workflow-name": "Build and Push Docker Image"}}'  # You can pass additional data as JSON here if needed
