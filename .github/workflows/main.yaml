@@ -1,0 +1,18 @@
+name: Trigger Workflow in selenium_docker
+
+on:
+  push:
+    branches:
+      - main  # Replace with the branch you want to trigger the workflow on
+
+jobs:
+  trigger_Selenium_docker_workflow:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger Selenium_docker Workflow
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          repository: smitpatel01/Selenium_Docker_Runner  # Replace with your GitHub username and the name of repo2
+          event-type: build_and_push  # Replace with the event type that matches your workflow_dispatch inputs in main.yml
+          client-payload: '{}'  # You can pass additional data as JSON here if needed
