@@ -6,6 +6,7 @@ pipeline {
             steps {
                 //sh
                 bat "docker pull smitpatel0109/selenium-docker"
+		bat "docker images" 
             }
         }
         stage('Start Grid') {
